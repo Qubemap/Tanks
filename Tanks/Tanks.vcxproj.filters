@@ -45,4 +45,567 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\barrelBlack_side.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barrelBlack_top.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barrelGreen_side.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barrelGreen_top.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barrelRed_side.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barrelRed_top.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barrelRust_side.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barrelRust_top.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barricadeMetal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\barricadeWood.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletBlue1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletBlue1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletBlue2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletBlue2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletBlue3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletBlue3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletDark1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletDark1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletDark2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletDark2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletDark3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletDark3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletGreen1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletGreen1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletGreen2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletGreen2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletGreen3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletGreen3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletRed1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletRed1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletRed2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletRed2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletRed3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletRed3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletSand1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletSand1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletSand2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletSand2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletSand3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bulletSand3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\crateMetal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\crateMetal_side.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\crateWood.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\crateWood_side.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosion1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosion2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosion3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosion4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosion5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosionSmoke1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosionSmoke2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosionSmoke3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosionSmoke4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\explosionSmoke5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\fenceRed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\fenceYellow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\oilSpill_large.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\oilSpill_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\sandbagBeige.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\sandbagBeige_open.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\sandbagBrown.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\sandbagBrown_open.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\shotLarge.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\shotOrange.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\shotRed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\shotThin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel4_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel5_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel6_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel7.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\specialBarrel7_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_bigRed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_dark.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_darkLarge.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_huge.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tank_sand.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBlue_barrel1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBlue_barrel1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBlue_barrel2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBlue_barrel2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBlue_barrel3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBlue_barrel3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_bigRed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_bigRed_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_blue.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_blue_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_dark.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_dark_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_darkLarge.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_darkLarge_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_green.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_green_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_huge.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_huge_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_red.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_red_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_sand.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankBody_sand_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankDark_barrel1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankDark_barrel1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankDark_barrel2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankDark_barrel2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankDark_barrel3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankDark_barrel3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankGreen_barrel1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankGreen_barrel1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankGreen_barrel2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankGreen_barrel2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankGreen_barrel3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankGreen_barrel3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankRed_barrel1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankRed_barrel1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankRed_barrel2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankRed_barrel2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankRed_barrel3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankRed_barrel3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankSand_barrel1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankSand_barrel1_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankSand_barrel2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankSand_barrel2_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankSand_barrel3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tankSand_barrel3_outline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadCornerLL.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadCornerLR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadCornerUL.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadCornerUR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadCrossing.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadCrossingRound.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadEast.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadNorth.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadSplitE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadSplitN.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadSplitS.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadSplitW.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionE_dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionN.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionN_dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionS.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionS_dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionW.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_roadTransitionW_dirt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_transitionE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_transitionN.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_transitionS.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass_transitionW.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileGrass2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadCornerLL.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadCornerLR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadCornerUL.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadCornerUR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadCrossing.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadCrossingRound.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadEast.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadNorth.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadSplitE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadSplitN.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadSplitS.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand_roadSplitW.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tileSand2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tracksDouble.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tracksLarge.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\tracksSmall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeBrown_large.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeBrown_leaf.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeBrown_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeBrown_twigs.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeGreen_large.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeGreen_leaf.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeGreen_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\treeGreen_twigs.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\wireCrooked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\wireStraight.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

@@ -35,6 +35,15 @@ namespace MathClasses
 
 		operator const float* () const { return data; }
 
+		/*Vector3& operator = (Vector3& rhs)
+		{
+			this->x = rhs.x;
+			this->y = rhs.y;
+			this->z = rhs.z;
+
+			return *this;
+		}*/
+
 		//adding vector (0, 2, 0) to another would shift the point up two units for example
 		Vector3 operator +(const Vector3& rhs) const
 		{

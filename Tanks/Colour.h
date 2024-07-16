@@ -23,10 +23,12 @@ namespace MathClasses
 			SetAlpha(alpha);
 		}
 
-		Colour operator = (Colour other)
+		Colour operator = (const Colour other)
 		{
 			this->colour = other.colour;
+			return *this;
 		}
+
 
 		bool operator == (Colour other)
 		{

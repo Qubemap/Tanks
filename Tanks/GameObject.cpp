@@ -11,9 +11,9 @@ GameObject::GameObject()
 {
 	Parent = nullptr;
 
-	LocalPosition = Vector3(0, 0, 1);
+	LocalPosition = MathClasses::Vector3(0, 0, 1);
 	LocalRotation = 0;
-	LocalScale = Vector3(1, 1, 1);
+	LocalScale = MathClasses::Vector3(1, 1, 1);
 }
 
 //
@@ -40,15 +40,15 @@ const GameObject* GameObject::GetChild(size_t childIndex) const
 	return Children[childIndex];
 }
 
-Vector3 GameObject::GetLocalPosition() const
+MathClasses::Vector3 GameObject::GetLocalPosition() const
 {
 	return LocalPosition;
 }
 
-Vector3 GameObject::GetWorldPosition() const
+MathClasses::Vector3 GameObject::GetWorldPosition() const
 {
-	Matrix3 worldMat = GetWorldMatrix();
-	return Vector3(worldMat.m7, worldMat.m8, worldMat.m9);
+	MathClasses::Matrix3 worldMat = GetWorldMatrix();
+	return MathClasses::Vector3(worldMat.m7, worldMat.m8, worldMat.m9);
 }
 
 float GameObject::GetLocalRotation() const
@@ -58,34 +58,34 @@ float GameObject::GetLocalRotation() const
 
 float GameObject::GetWorldRotation() const
 {
-	Vector3 fwd = GetForward();
+	MathClasses::Vector3 fwd = GetForward();
 	return atan2(fwd.x, fwd.y);
 }
 
-Vector3 GameObject::GetLocalScale() const
+MathClasses::Vector3 GameObject::GetLocalScale() const
 {
 	return LocalScale;
 }
 
-Vector3 GameObject::GetWorldScale() const
+MathClasses::Vector3 GameObject::GetWorldScale() const
 {
-	Matrix3 myTransform = GetWorldMatrix();
+	MathClasses::Matrix3 myTransform = GetWorldMatrix();
 
-	return Vector3(Vector3(myTransform.m1, myTransform.m2, 0).Magnitude(), Vector3(myTransform.m4, myTransform.m5, 0).Magnitude(), 1.0f);
+	return MathClasses::Vector3(MathClasses::Vector3(myTransform.m1, myTransform.m2, 0).Magnitude(), MathClasses::Vector3(myTransform.m4, myTransform.m5, 0).Magnitude(), 1.0f);
 }
 
-Vector3 GameObject::GetForward() const
+MathClasses::Vector3 GameObject::GetForward() const
 {
 	auto mat = GetWorldMatrix();
-	return Vector3(mat[0], mat[1], mat[2]);
+	return MathClasses::Vector3(mat[0], mat[1], mat[2]);
 }
 
-Matrix3 GameObject::GetLocalMatrix() const
+MathClasses::Matrix3 GameObject::GetLocalMatrix() const
 {
-	return Matrix3::MakeTranslation(LocalPosition) * Matrix3::MakeRotateZ(LocalRotation) * Matrix3::MakeScale(LocalScale.x, LocalScale.y);
+	return MathClasses::Matrix3::MakeTranslation(LocalPosition) * MathClasses::Matrix3::MakeRotateZ(LocalRotation) * MathClasses::Matrix3::MakeScale(LocalScale.x, LocalScale.y);
 }
 
-Matrix3 GameObject::GetWorldMatrix() const
+MathClasses::Matrix3 GameObject::GetWorldMatrix() const
 {
 	if (Parent == nullptr)
 	{
@@ -121,14 +121,14 @@ void GameObject::SetParent(GameObject* newParent)
 	}
 }
 
-void GameObject::SetLocalPosition(Vector3 newPosition)
+void GameObject::SetLocalPosition(MathClasses::Vector3 newPosition)
 {
 	LocalPosition = newPosition;
 }
 
 void GameObject::SetLocalPosition(float newX, float newY)
 {
-	LocalPosition = Vector3(newX, newY, LocalPosition.z);
+	LocalPosition = MathClasses::Vector3(newX, newY, LocalPosition.z);
 }
 
 void GameObject::SetLocalRotation(float newRotation)
@@ -136,14 +136,14 @@ void GameObject::SetLocalRotation(float newRotation)
 	LocalRotation = newRotation;
 }
 
-void GameObject::SetLocalScale(Vector3 newScale)
+void GameObject::SetLocalScale(MathClasses::Vector3 newScale)
 {
 	LocalScale = newScale;
 }
 
 void GameObject::SetLocalScale(float newX, float newY)
 {
-	LocalScale = Vector3(newX, newY, LocalScale.z);
+	LocalScale = MathClasses::Vector3(newX, newY, LocalScale.z);
 }
 
 //
@@ -152,10 +152,10 @@ void GameObject::SetLocalScale(float newX, float newY)
 
 void GameObject::Translate(float x, float y)
 {
-	LocalPosition += Vector3(x, y, 0);
+	LocalPosition += MathClasses::Vector3(x, y, 0);
 }
 
-void GameObject::Translate(Vector3 translation)
+void GameObject::Translate(MathClasses::Vector3 translation)
 {
 	LocalPosition += translation;
 }
@@ -167,10 +167,10 @@ void GameObject::Rotate(float radians)
 
 void GameObject::Scale(float x, float y)
 {
-	LocalScale *= Vector3(x, y, 1);
+	LocalScale *= MathClasses::Vector3(x, y, 1);
 }
 
-void GameObject::Scale(Vector3 scaling)
+void GameObject::Scale(MathClasses::Vector3 scaling)
 {
 	LocalScale *= scaling;
 }

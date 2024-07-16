@@ -11,9 +11,9 @@ class SpriteObject : public GameObject
 public:
 
 	raylib::Texture2D* Sprite;
-	Vector3 Origin;
+	MathClasses::Vector3 Origin;
 
-	Color Tint;
+	MathClasses::Colour Tint;
 
 	SpriteObject();
 

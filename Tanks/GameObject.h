@@ -2,11 +2,11 @@
 
 #include <vector>
 
-#include "Vector3.h"
 #include "Matrix3.h"
+#include "Vector3.h"
 
-using::MathClasses::Vector3;
-using::MathClasses::Matrix3;
+//using::MathClasses::Vector3;
+//using::MathClasses::Matrix3;
 
 class GameObject
 {
@@ -17,13 +17,13 @@ protected:
 	//
 
 	// Position relative to parent
-	Vector3 LocalPosition;
+	MathClasses::Vector3 LocalPosition;
 
 	// rotation relative to parent (in radians)
 	float LocalRotation;
 	
 	// Scale relative to parent
-	Vector3 LocalScale;
+	MathClasses::Vector3 LocalScale;
 
 	// Pointer to parent
 	GameObject* Parent;
@@ -64,23 +64,23 @@ public:
 	// Get a child at index - const-qualified
 	const GameObject* GetChild(size_t childIndex) const;
 
-	Vector3 GetLocalPosition() const;
+	MathClasses::Vector3 GetLocalPosition() const;
 
-	Vector3 GetWorldPosition() const;
+	MathClasses::Vector3 GetWorldPosition() const;
 
 	float GetLocalRotation() const;
 
 	float GetWorldRotation() const;
 
-	Vector3 GetLocalScale() const;
+	MathClasses::Vector3 GetLocalScale() const;
 
-	Vector3 GetWorldScale() const;
+	MathClasses::Vector3 GetWorldScale() const;
 
-	Vector3 GetForward() const;
+	MathClasses::Vector3 GetForward() const;
 
-	Matrix3 GetLocalMatrix() const;
+	MathClasses::Matrix3 GetLocalMatrix() const;
 
-	Matrix3 GetWorldMatrix() const;
+	MathClasses::Matrix3 GetWorldMatrix() const;
 
 	//
 	// SETTERS
@@ -89,13 +89,13 @@ public:
 	// Set a new parent for this object and/or unassign the original
 	void SetParent(GameObject* parent);
 
-	void SetLocalPosition(Vector3 newPosition);
+	void SetLocalPosition(MathClasses::Vector3 newPosition);
 
 	void SetLocalPosition(float newX, float newY);
 
 	void SetLocalRotation(float newRotation);
 
-	void SetLocalScale(Vector3 newScale);
+	void SetLocalScale(MathClasses::Vector3 newScale);
 
 	void SetLocalScale(float newX, float newY);
 
@@ -107,7 +107,7 @@ public:
 	void Translate(float x, float y);
 
 	// Move locally on X, Y, Z axes
-	void Translate(Vector3 translation);
+	void Translate(MathClasses::Vector3 translation);
 
 	// Rotate locally by given number of radians
 	void Rotate(float radians);
@@ -116,7 +116,7 @@ public:
 	void Scale(float x, float y);
 
 	// Scale locally on x, y. Z axes
-	void Scale(Vector3 scalar);
+	void Scale(MathClasses::Vector3 scalar);
 
 	//
 	// FUNCTIONS
