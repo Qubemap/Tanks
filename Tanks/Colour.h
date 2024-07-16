@@ -23,6 +23,11 @@ namespace MathClasses
 			SetAlpha(alpha);
 		}
 
+		Colour operator = (Colour other)
+		{
+			this->colour = other.colour;
+		}
+
 		bool operator == (Colour other)
 		{
 			if (this->colour == other.colour)

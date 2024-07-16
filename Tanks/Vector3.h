@@ -102,12 +102,19 @@ namespace MathClasses
 			z = z - rhs.z;
 		}
 
-		
-		Vector3 operator *=(const float& scalar)
+
+		void operator *=(const float& scalar)
 		{
 			x = x * scalar;
 			y = y * scalar;
 			z = z * scalar;
+		}
+
+		void operator *=(const Vector3& rhs)
+		{
+			x = x * rhs.x;
+			y = y * rhs.y;
+			z = z * rhs.z;
 		}
 
 		void operator /=(const Vector3& rhs)
@@ -181,12 +188,12 @@ namespace MathClasses
 		//Dot and cross product
 
 		//dot returns difference in angle. 1 
-		float Dot(const Vector3& other)
+		const float Dot(const Vector3& other) const
 		{
 			return x * other.x + y * other.y + z * other.z;
 		}
 
-		Vector3 Vector3::Cross(const Vector3& other)
+		Vector3 Cross(const Vector3& other)
 		{
 			return Vector3(y * other.z - z * other.y,
 				z * other.x - x * other.z,

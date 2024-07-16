@@ -95,17 +95,17 @@ namespace MathClasses
 		Matrix3 operator *=(const Matrix3 rhs)
 		{
 
-				m1 = m1 * rhs.m1 + m4 * rhs.m2 + m7 * rhs.m3;
-				m2 = m2 * rhs.m1 + m5 * rhs.m2 + m8 * rhs.m3;
-				m3 = m3 * rhs.m1 + m6 * rhs.m2 + m9 * rhs.m3;
+			m1 = m1 * rhs.m1 + m4 * rhs.m2 + m7 * rhs.m3;
+			m2 = m2 * rhs.m1 + m5 * rhs.m2 + m8 * rhs.m3;
+			m3 = m3 * rhs.m1 + m6 * rhs.m2 + m9 * rhs.m3;
 
-				m4 = m1 * rhs.m4 + m4 * rhs.m5 + m7 * rhs.m6;
-				m5 = m2 * rhs.m4 + m5 * rhs.m5 + m8 * rhs.m6;
-				m6 = m3 * rhs.m4 + m6 * rhs.m5 + m9 * rhs.m6;
+			m4 = m1 * rhs.m4 + m4 * rhs.m5 + m7 * rhs.m6;
+			m5 = m2 * rhs.m4 + m5 * rhs.m5 + m8 * rhs.m6;
+			m6 = m3 * rhs.m4 + m6 * rhs.m5 + m9 * rhs.m6;
 
-				m7 = m1 * rhs.m7 + m4 * rhs.m8 + m7 * rhs.m9;
-				m8 = m2 * rhs.m7 + m5 * rhs.m8 + m8 * rhs.m9;
-				m9 = m3 * rhs.m7 + m6 * rhs.m8 + m9 * rhs.m9;
+			m7 = m1 * rhs.m7 + m4 * rhs.m8 + m7 * rhs.m9;
+			m8 = m2 * rhs.m7 + m5 * rhs.m8 + m8 * rhs.m9;
+			m9 = m3 * rhs.m7 + m6 * rhs.m8 + m9 * rhs.m9;
 		}
 
 		bool operator == (const Matrix3& other) const
@@ -113,7 +113,7 @@ namespace MathClasses
 			const float THRESHOLD = 0.00001f;
 
 			float cmp;
-			
+
 			for (int i = 0; i < 9; i++)
 			{
 				cmp = fabsf(v[i] - other.v[i]);
@@ -123,7 +123,7 @@ namespace MathClasses
 				}
 				i++;
 			}
-			
+
 			return true;
 		}
 
@@ -182,7 +182,7 @@ namespace MathClasses
 				-sinf(a), cosf(a), 0,
 				0, 0, 1);
 		}
-		
+
 		static Matrix3 MakeEuler(float pitch, float yaw, float roll)
 		{
 			Matrix3 x = MakeRotateX(pitch);
@@ -235,5 +235,5 @@ namespace MathClasses
 			return str;
 		}
 	};
-	
+
 }
