@@ -38,12 +38,25 @@ namespace MathClasses
 			m9 = M9;
 		}
 
-		Matrix3(float a[])
+		//Matrix3(float a[])
+		//{
+		//	for (int i = 0; i < 9; i++)
+		//	{
+		//		v[i] = a[i];
+		//	}
+		//}
+
+		Matrix3(float numbers[])
 		{
-			for (int i = 0; i < 9; i++)
-			{
-				v[i] = a[i];
-			}
+			m1 = numbers[0];
+			m2 = numbers[1];
+			m3 = numbers[2];
+			m4 = numbers[3];
+			m5 = numbers[4];
+			m6 = numbers[5];
+			m7 = numbers[6];
+			m8 = numbers[7];
+			m9 = numbers[8];
 		}
 
 		static Matrix3 MakeIdentity()

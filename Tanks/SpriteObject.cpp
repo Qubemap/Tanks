@@ -11,11 +11,12 @@ void SpriteObject::OnDraw()
 {
 	// extract transform data position
 	MathClasses::Vector3 pos = GetWorldPosition();
-	float rot = GetWorldRotation() * RAD2DEG;
+	float rot = GetWorldRotation() * RAD2DEG; //POTENTIAL
 	MathClasses::Vector3 scale = GetWorldScale();
 
 	// draw the sprite
-	Sprite->Draw(raylib::Rectangle(0, 0, (float)Sprite->width, (float)Sprite->height), 
+	Sprite->Draw(
+		raylib::Rectangle(0, 0, (float)Sprite->width, (float)Sprite->height), 
 		raylib::Rectangle(pos.x, pos.y, Sprite->width * scale.x, Sprite->height * scale.y), 
 		raylib::Vector2(Sprite->width * Origin.x * scale.x, Sprite->height * Origin.y * scale.y), 
 		rot, 

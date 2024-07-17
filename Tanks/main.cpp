@@ -1,56 +1,59 @@
 #include "raylib-cpp.hpp"
 
 #include "SpriteObject.h"
+#include "TankPlayer.h"
 
 int main(void)
 {
-    // Initialization
-    //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+	// Initialization
+	//--------------------------------------------------------------------------------------
+	const int screenWidth = 800;
+	const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+	InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
-    //--------------------------------------------------------------------------------------
+	SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+	//--------------------------------------------------------------------------------------
 
-    raylib::Texture2D tankSprite("Resources/tankBody_blue_outline.png");
+	raylib::Texture2D tankSprite("Resources/tankBody_green.png");
 
-    SpriteObject Player;
-    Player.Sprite = &tankSprite;
-    Player.SetLocalPosition(screenWidth / 2, screenHeight / 2);
+	TankPlayer Player;
+	Player.Sprite = &tankSprite;
+	Player.SetLocalPosition(screenWidth / 2, screenHeight / 2);
 
-    // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
-    {
-        // Update
-        //----------------------------------------------------------------------------------
-        float deltaTime = GetFrameTime();
+	// Main game loop
+	while (!WindowShouldClose())    // Detect window close button or ESC key
+	{
+		// Update
+		//----------------------------------------------------------------------------------
+		float deltaTime = GetFrameTime();
 
-        Player.Update(deltaTime);
-        //----------------------------------------------------------------------------------
+		Player.Update(deltaTime);
+		//----------------------------------------------------------------------------------
 
-        // Draw
-        //----------------------------------------------------------------------------------
-        BeginDrawing();
-        {
-            ClearBackground(RAYWHITE);
+		// Draw
+		//----------------------------------------------------------------------------------
+		BeginDrawing();
+		{
+			ClearBackground(RAYWHITE);
 
-            Player.Draw();
-        }
+			Player.Draw();
+		}
 
-        //ClearBackground(RAYWHITE);
+		//ClearBackground(RAYWHITE);
 
-        //DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+		//DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
-        EndDrawing();
-        //----------------------------------------------------------------------------------
-    }
+		EndDrawing();
+		//----------------------------------------------------------------------------------
+	}
 
-    // De-Initialization
-    //--------------------------------------------------------------------------------------
-    CloseWindow();        // Close window and OpenGL context
-    //--------------------------------------------------------------------------------------
+	// De-Initialization
+	//--------------------------------------------------------------------------------------
+	CloseWindow();        // Close window and OpenGL context
+	//--------------------------------------------------------------------------------------
 
-    return 0;
+
+	//meow
+	return 0;
 }

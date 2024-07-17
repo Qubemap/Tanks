@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include "raylib-cpp.hpp"
 
 //
 // CONSTRUCTORS
@@ -12,7 +13,7 @@ GameObject::GameObject()
 	Parent = nullptr;
 
 	LocalPosition = MathClasses::Vector3(0, 0, 1);
-	LocalRotation = 0;
+	LocalRotation = 0; // ========================= SHOULD BE 0 (1.5708)
 	LocalScale = MathClasses::Vector3(1, 1, 1);
 }
 
@@ -58,8 +59,8 @@ float GameObject::GetLocalRotation() const
 
 float GameObject::GetWorldRotation() const
 {
-	MathClasses::Vector3 fwd = GetForward();
-	return atan2(fwd.x, fwd.y);
+	MathClasses::Vector3 fwd = GetForward(); //----------------------------------------------------------------------------------------------
+	return atan2(fwd.x , fwd.y);
 }
 
 MathClasses::Vector3 GameObject::GetLocalScale() const

@@ -134,12 +134,14 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Matrix3.h" />
     <ClInclude Include="SpriteObject.h" />
+    <ClInclude Include="TankPlayer.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SpriteObject.cpp" />
+    <ClCompile Include="TankPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\barrelBlack_side.png" />
