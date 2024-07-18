@@ -16,10 +16,15 @@ int main(void)
 	//--------------------------------------------------------------------------------------
 
 	raylib::Texture2D tankSprite("Resources/tankBody_green.png");
+	raylib::Texture2D turretSprite("Resources/tankDark_Barrel1.png");
 
 	TankPlayer Player;
 	Player.Sprite = &tankSprite;
 	Player.SetLocalPosition(screenWidth / 2, screenHeight / 2);
+
+	SpriteObject Turret;
+	Turret.Sprite = &turretSprite;
+	Turret.SetParent(&Player);
 
 	// Main game loop
 	while (!WindowShouldClose())    // Detect window close button or ESC key
@@ -29,6 +34,7 @@ int main(void)
 		float deltaTime = GetFrameTime();
 
 		Player.Update(deltaTime);
+
 		//----------------------------------------------------------------------------------
 
 		// Draw

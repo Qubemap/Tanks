@@ -194,6 +194,11 @@ void GameObject::Update(float deltaTime)
 {
 	OnUpdate(deltaTime);
 
+	for (size_t i = 0; i < Children.size(); i++)
+	{
+		Children[i]->OnUpdate(deltaTime);
+	}
+
 	// TODO: iterate through children and call update on them
 
 }
@@ -202,6 +207,10 @@ void GameObject::Draw()
 {
 	OnDraw();
 
+	for (size_t i = 0; i < Children.size(); i++)
+	{
+		Children[i]->Draw();
+	}
 	// TODO: iterate through children and call Draw on them
 
 }
