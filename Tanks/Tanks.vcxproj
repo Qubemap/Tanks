@@ -127,9 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Colour.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Matrix3.h" />
@@ -331,6 +328,9 @@
     <Image Include="Resources\treeGreen_twigs.png" />
     <Image Include="Resources\wireCrooked.png" />
     <Image Include="Resources\wireStraight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

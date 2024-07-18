@@ -22,11 +22,11 @@ void TankPlayer::OnUpdate(float deltaTime)
 
 	if (IsKeyDown(KeyboardKey::KEY_Q))
 	{
-		rot += ROTSPEED;
+		rot -= ROTSPEED;
 	}
 	if (IsKeyDown(KeyboardKey::KEY_E))
 	{
-		rot -= ROTSPEED;
+		rot += ROTSPEED;
 	}
 
 	// displacement for this frame
