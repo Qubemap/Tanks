@@ -11,7 +11,7 @@ void SpriteObject::OnDraw()
 {
 	// extract transform data position
 	MathClasses::Vector3 pos = GetWorldPosition();
-	float rot = GetWorldRotation() * RAD2DEG; //POTENTIAL
+	float rot = GetWorldRotation() * RAD2DEG;
 	MathClasses::Vector3 scale = GetWorldScale();
 
 	// draw the sprite

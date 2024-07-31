@@ -130,14 +130,18 @@
     <ClInclude Include="Colour.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Matrix3.h" />
+    <ClInclude Include="Projectile.h" />
     <ClInclude Include="SpriteObject.h" />
+    <ClInclude Include="TankManager.h" />
     <ClInclude Include="TankPlayer.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="SpriteObject.cpp" />
+    <ClCompile Include="TankManager.cpp" />
     <ClCompile Include="TankPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -1,11 +1,12 @@
 #include "TankPlayer.h"
+#include "Projectile.h"
 
 void TankPlayer::OnUpdate(float deltaTime)
 {
-	const float MOVESPEED = 150.0f;
+	/*const float MOVESPEED = 150.0f;
 	const float ROTSPEED = (1 * DEG2RAD);
 
-	const float TURRETSPEED = (1 * DEG2RAD); 
+	const float TURRETSPEED = (1 * DEG2RAD); */
 
 	GameObject* Turret = GetChild(0);
 
@@ -19,29 +20,34 @@ void TankPlayer::OnUpdate(float deltaTime)
 	//W-S for UP-Down movement
 	if (IsKeyDown(KeyboardKey::KEY_W))
 	{
-		yMove += MOVESPEED;
+		yMove += moveSpeed;
 	}
 	if (IsKeyDown(KeyboardKey::KEY_S))
 	{
-		yMove -= MOVESPEED;
+		yMove -= moveSpeed;
 	}
 
 	if (IsKeyDown(KeyboardKey::KEY_Q))
 	{
-		rot -= ROTSPEED;
+		rot -= rotSpeed;
 	}
 	if (IsKeyDown(KeyboardKey::KEY_E))
 	{
-		rot += ROTSPEED;
+		rot += rotSpeed;
 	}
 
 	if (IsKeyDown(KeyboardKey::KEY_LEFT))
 	{
-		turretRot -= TURRETSPEED;
+		turretRot -= turretSpeed;
 	}
 	if (IsKeyDown(KeyboardKey::KEY_RIGHT))
 	{
-		turretRot += TURRETSPEED;
+		turretRot += turretSpeed;
+	}
+
+	if (IsKeyDown(KeyboardKey::KEY_SPACE))
+	{
+		Shoot();
 	}
 
 	// displacement for this frame
@@ -51,8 +57,9 @@ void TankPlayer::OnUpdate(float deltaTime)
 
 	Translate(finalMove);
 
-	Children[0]->Rotate(turretRot);
+	//Children[0]->Rotate(turretRot);
 
+	Turret->Rotate(turretRot);
 
-	
 }
+
