@@ -8,7 +8,7 @@ void TankPlayer::OnUpdate(float deltaTime)
 
 	MathClasses::Vector3 worldScale = GetWorldScale();
 
-	float scaleMod = (worldScale[0]);
+	float scaleMod = (worldScale[0]); //compensates for worlds scale when moving
 
 	// check for key input
 	float yMove = 0.0f;
@@ -36,7 +36,15 @@ void TankPlayer::OnUpdate(float deltaTime)
 		rot += rotSpeed;
 	}
 
-	if (IsKeyDown(KeyboardKey::KEY_LEFT))
+	if (IsKeyDown(KeyboardKey::KEY_Q))
+	{
+		turretRot -= turretSpeed;
+	}
+	if (IsKeyDown(KeyboardKey::KEY_E))
+	{
+		turretRot += turretSpeed;
+	}
+	if (IsKeyDown(KeyboardKey::KEY_LEFT)) 
 	{
 		turretRot -= turretSpeed;
 	}
