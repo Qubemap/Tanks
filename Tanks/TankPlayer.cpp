@@ -3,12 +3,12 @@
 
 void TankPlayer::OnUpdate(float deltaTime)
 {
-	/*const float MOVESPEED = 150.0f;
-	const float ROTSPEED = (1 * DEG2RAD);
-
-	const float TURRETSPEED = (1 * DEG2RAD); */
 
 	GameObject* Turret = GetChild(0);
+
+	MathClasses::Vector3 worldScale = GetWorldScale();
+
+	float scaleMod = (worldScale[0]);
 
 	// check for key input
 	float yMove = 0.0f;
@@ -27,11 +27,11 @@ void TankPlayer::OnUpdate(float deltaTime)
 		yMove -= moveSpeed;
 	}
 
-	if (IsKeyDown(KeyboardKey::KEY_Q))
+	if (IsKeyDown(KeyboardKey::KEY_A))
 	{
 		rot -= rotSpeed;
 	}
-	if (IsKeyDown(KeyboardKey::KEY_E))
+	if (IsKeyDown(KeyboardKey::KEY_D))
 	{
 		rot += rotSpeed;
 	}
@@ -45,13 +45,8 @@ void TankPlayer::OnUpdate(float deltaTime)
 		turretRot += turretSpeed;
 	}
 
-	if (IsKeyDown(KeyboardKey::KEY_SPACE))
-	{
-		Shoot();
-	}
-
 	// displacement for this frame
-	MathClasses::Vector3 finalMove = GetForward() * (yMove * deltaTime);
+	MathClasses::Vector3 finalMove = GetForward() * ((yMove / scaleMod) * deltaTime);
 
 	Rotate(rot);
 
