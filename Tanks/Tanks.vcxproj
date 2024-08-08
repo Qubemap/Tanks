@@ -134,6 +134,8 @@
     <ClInclude Include="SpriteObject.h" />
     <ClInclude Include="TankManager.h" />
     <ClInclude Include="TankPlayer.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vector2.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
