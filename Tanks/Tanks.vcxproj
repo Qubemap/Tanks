@@ -127,8 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AABB.h" />
     <ClInclude Include="Colour.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Matrix2.h" />
     <ClInclude Include="Matrix3.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="SpriteObject.h" />

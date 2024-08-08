@@ -2,9 +2,11 @@
 
 void Projectile::OnUpdate(float deltaTime)
 {
-	const float SPEED = 300.0f;
+	MathClasses::Vector3 worldScale = GetWorldScale();
 
-	MathClasses::Vector3 finalMove = GetForward() * (SPEED * deltaTime);
+	float scaleMod = (worldScale[0]);
+
+	MathClasses::Vector3 finalMove = GetForward() * ((moveSpeed / scaleMod) * deltaTime);
 
 	Translate(finalMove);
 }

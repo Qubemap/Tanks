@@ -3,6 +3,7 @@
 #include "SpriteObject.h"
 #include "TankPlayer.h"
 #include "TankManager.h"
+#include "Projectile.h"
 
 int main(void)
 {
@@ -18,7 +19,6 @@ int main(void)
 
 	raylib::Texture2D tankSprite("Resources/tankBody_blue_outline.png");
 	raylib::Texture2D turretSprite("Resources/specialBarrel1_outline.png");
-
 	raylib::Texture2D bulletSprite("Resources/bulletDark1_outline.png");
 
 	raylib::Texture2D redFenceSprite("Resources/fenceRed.png");
@@ -30,6 +30,7 @@ int main(void)
 	TankPlayer Player;
 	Player.Sprite = &tankSprite;
 	Player.SetParent(&Master);
+	Player.bulletSprite = &bulletSprite;
 
 	SpriteObject Turret;
 	Turret.Sprite = &turretSprite;

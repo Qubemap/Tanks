@@ -199,7 +199,6 @@ void GameObject::Update(float deltaTime)
 		Children[i]->Update(deltaTime);
 	}
 }
-
 void GameObject::Draw()
 {
 	OnDraw();

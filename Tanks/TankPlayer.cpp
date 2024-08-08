@@ -1,8 +1,9 @@
+
 #include "TankPlayer.h"
-#include "Projectile.h"
 
 void TankPlayer::OnUpdate(float deltaTime)
 {
+	reloadTime--;
 
 	GameObject* Turret = GetChild(0);
 
@@ -53,6 +54,12 @@ void TankPlayer::OnUpdate(float deltaTime)
 		turretRot += turretSpeed;
 	}
 
+	if (IsKeyDown(KeyboardKey::KEY_SPACE) && reloadTime <= 0)
+	{
+		Shoot();
+		reloadTime = 100;
+	}
+
 	// displacement for this frame
 	MathClasses::Vector3 finalMove = GetForward() * ((yMove / scaleMod) * deltaTime);
 
@@ -63,6 +70,29 @@ void TankPlayer::OnUpdate(float deltaTime)
 	//Children[0]->Rotate(turretRot);
 
 	Turret->Rotate(turretRot);
+
+}
+
+void TankPlayer::Shoot()
+{
+
+	GameObject* Turret = GetChild(0);
+
+	Projectile* Bullet = new Projectile();
+
+	Bullet->Sprite = bulletSprite;
+
+	Bullet->SetLocalRotation(0);
+
+	Bullet->SetLocalPosition(GetLocalPosition());
+
+	Bullet->Rotate(GetLocalRotation() + Turret->GetLocalRotation());
+
+	Bullet->SetParent(GetParent());
+
+	//MathClasses::Vector3 offset = GetForward() * 
+
+	reloadTime = 100;
 
 }
 
