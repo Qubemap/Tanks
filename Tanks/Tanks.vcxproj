@@ -133,6 +133,7 @@
     <ClInclude Include="Matrix2.h" />
     <ClInclude Include="Matrix3.h" />
     <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="SpriteObject.h" />
     <ClInclude Include="TankManager.h" />
     <ClInclude Include="TankPlayer.h" />

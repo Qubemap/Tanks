@@ -7,6 +7,8 @@ class TankPlayer : public SpriteObject
 {
 public:
 
+	float scaleMod = 0.0f;
+
 	float moveSpeed = 150.0f;
 
 	float rotSpeed = (1 * DEG2RAD);
@@ -17,6 +19,7 @@ public:
 
 	int reloadTime = 100;
 
+	float delta;
 
 protected:
 

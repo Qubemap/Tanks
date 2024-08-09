@@ -41,6 +41,10 @@ protected:
 	// Called when this specific object needs to draw to the screen
 	virtual void OnDraw();
 
+	bool Impenetrable;
+
+	Circle hitbox;
+
 public:
 
 	//

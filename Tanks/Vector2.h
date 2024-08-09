@@ -176,7 +176,6 @@ namespace MathClasses
 
 		//Dot and cross product
 
-		//dot returns difference in angle. 1 
 		const float Dot(const Vector2& other) const
 		{
 			return x * other.x + y * other.y;
@@ -200,6 +199,15 @@ namespace MathClasses
 
 			//return the angle between them
 			return acosf(d);
+		}
+
+		float DistanceTo(const Vector2& other) const
+		{
+			
+			Vector2 nvec(other.x - x, other.y - y);
+
+			return (nvec.Magnitude());
+
 		}
 	};
 };

@@ -2,6 +2,8 @@
 
 void Projectile::OnUpdate(float deltaTime)
 {
+	SpriteObject::OnUpdate(deltaTime);
+
 	MathClasses::Vector3 worldScale = GetWorldScale();
 
 	float scaleMod = (worldScale[0]);
@@ -9,4 +11,5 @@ void Projectile::OnUpdate(float deltaTime)
 	MathClasses::Vector3 finalMove = GetForward() * ((moveSpeed / scaleMod) * deltaTime);
 
 	Translate(finalMove);
+
 }

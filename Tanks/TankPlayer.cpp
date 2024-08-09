@@ -3,13 +3,17 @@
 
 void TankPlayer::OnUpdate(float deltaTime)
 {
+	SpriteObject::OnUpdate(deltaTime); //we do this if we have a hitbox
+
+	this->delta = deltaTime;
+
 	reloadTime--;
 
 	GameObject* Turret = GetChild(0);
 
 	MathClasses::Vector3 worldScale = GetWorldScale();
 
-	float scaleMod = (worldScale[0]); //compensates for worlds scale when moving
+	scaleMod = (worldScale[0]); //compensates for worlds scale when moving
 
 	// check for key input
 	float yMove = 0.0f;
@@ -88,11 +92,11 @@ void TankPlayer::Shoot()
 
 	Bullet->Rotate(GetLocalRotation() + Turret->GetLocalRotation());
 
+	MathClasses::Vector3 offset = Bullet->GetForward() * 50;
+
+	Bullet->Translate(offset);
+
 	Bullet->SetParent(GetParent());
-
-	//MathClasses::Vector3 offset = GetForward() * 
-
-	reloadTime = 100;
 
 }
 

@@ -5,6 +5,7 @@
 
 #include "Colour.h"
 #include "GameObject.h"
+#include "Circle.h"
 
 class SpriteObject : public GameObject
 {
@@ -18,6 +19,8 @@ public:
 	SpriteObject();
 
 protected:
+
+	virtual void OnUpdate(float deltaTime) override;
 
 	void OnDraw() override;
 };

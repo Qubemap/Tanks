@@ -7,6 +7,20 @@ SpriteObject::SpriteObject()
 	Tint = MathClasses::Colour(255, 255, 255, 255);
 }
 
+void SpriteObject::OnUpdate(float deltaTime)
+{
+	if (Sprite != nullptr)
+	{
+		MathClasses::Vector3 pos = GetWorldPosition();
+		MathClasses::Vector3 scale = GetWorldScale();
+		MathClasses::Vector2 center(pos.x, pos.y);
+		float radius = (((float)Sprite->width * scale.x) / 2);
+		hitbox.center = center;
+		hitbox.radius = radius;
+
+	}
+}
+
 void SpriteObject::OnDraw()
 {
 	// extract transform data position
@@ -23,3 +37,4 @@ void SpriteObject::OnDraw()
 		raylib::Color(Tint.GetRed(), Tint.GetGreen(), Tint.GetGreen(), Tint.GetAlpha()));
 
 }
+
