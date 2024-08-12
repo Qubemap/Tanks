@@ -21,11 +21,19 @@ int main(void)
 	raylib::Texture2D turretSprite("Resources/specialBarrel1_outline.png");
 	raylib::Texture2D bulletSprite("Resources/bulletDark1_outline.png");
 
-	raylib::Texture2D redFenceSprite("Resources/fenceRed.png");
-	raylib::Texture2D yellowFenceSprite("Resources/fenceYellow.png");
+	
+	raylib::Texture2D trapSprite("Resources/barricadeWood.png");
 
 	TankManager Master;
 	Master.SetLocalPosition(screenWidth / 2, screenHeight / 2);
+	Master.xbound = 800.0f;
+	Master.ybound = 450.0f;
+
+	SpriteObject TankTrap;
+	TankTrap.Sprite = &trapSprite;
+	TankTrap.SetParent(&Master);
+	TankTrap.SetLocalPosition(-400, 100);
+	TankTrap.AddTag("ImmovableObject");
 
 	TankPlayer Player;
 	Player.Sprite = &tankSprite;
@@ -37,15 +45,7 @@ int main(void)
 	Turret.Origin = MathClasses::Vector3(0.25f, 0.5f, 0.5f); //Places rear end of turret at centre of tank
 	Turret.SetParent(&Player);
 
-	SpriteObject RedFence;
-	RedFence.Sprite = &redFenceSprite;
-	RedFence.SetLocalPosition(-100, -100);
-	RedFence.SetParent(&Master);
-
-	SpriteObject YellowFence;
-	YellowFence.Sprite = &yellowFenceSprite;
-	YellowFence.SetLocalPosition(100, 100);
-	YellowFence.SetParent(&Master);
+	
 
 
 	// Main game loop

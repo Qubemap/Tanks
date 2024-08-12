@@ -17,7 +17,6 @@ void SpriteObject::OnUpdate(float deltaTime)
 		float radius = (((float)Sprite->width * scale.x) / 2);
 		hitbox.center = center;
 		hitbox.radius = radius;
-
 	}
 }
 

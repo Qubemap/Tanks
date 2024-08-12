@@ -17,6 +17,73 @@ GameObject::GameObject()
 	LocalScale = MathClasses::Vector3(1, 1, 1);
 }
 
+GameObject::~GameObject()
+{
+	if (Parent != nullptr)
+	{
+		auto findIt = std::find(Parent->Children.begin(), Parent->Children.end(), this);
+		{
+			Parent->Children.erase(findIt);
+			Parent = nullptr;
+		}
+	}
+	// TODO delete children
+}
+
+// TAG STUFF
+
+void GameObject::AddTag(std::string tag)
+{
+	Tags.push_back(tag);
+}
+
+void GameObject::RemoveTag(std::string tag)
+{
+	for (size_t i = 0; i < Tags.size(); i++)
+	{
+		if (Tags[i] == tag)
+		{
+			Tags.erase(Tags.begin() + i);
+			return;
+		}
+	}
+}
+
+bool GameObject::HasTag(std::string tag) const
+{
+	for (size_t i = 0; i < Tags.size(); i++)
+	{
+		if (Tags[i] == tag)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+bool GameObject::CheckCollision(GameObject* other)
+{
+	if (other == this)
+	{
+		return false;
+	}
+
+	if (hitbox.Overlaps(other->hitbox))
+	{
+		OnCollision(other);
+		return true;
+	}
+
+	return false;
+
+}
+
+void GameObject::OnCollision(GameObject* other)
+{
+
+}
+
 //
 // GETTERS
 //
@@ -122,6 +189,18 @@ void GameObject::SetParent(GameObject* newParent)
 	}
 }
 
+void GameObject::RemoveParent()
+{
+	if (Parent != nullptr)
+	{
+		auto findIt = std::find(Parent->Children.begin(), Parent->Children.end(), this);
+		{
+			Parent->Children.erase(findIt);
+			Parent = nullptr;
+		}
+	}
+}
+
 void GameObject::SetLocalPosition(MathClasses::Vector3 newPosition)
 {
 	LocalPosition = newPosition;
@@ -199,6 +278,7 @@ void GameObject::Update(float deltaTime)
 		Children[i]->Update(deltaTime);
 	}
 }
+
 void GameObject::Draw()
 {
 	OnDraw();

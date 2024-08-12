@@ -4,6 +4,7 @@
 
 #include "Matrix3.h"
 #include "Vector3.h"
+#include "Circle.h"
 
 //using::MathClasses::Vector3;
 //using::MathClasses::Matrix3;
@@ -31,6 +32,11 @@ protected:
 	// Vector of children
 	std::vector<GameObject*> Children;
 
+	// Vector of tags
+	std::vector<std::string> Tags;
+
+	Circle hitbox;
+
 	//
 	// FUNCTIONS
 	//
@@ -41,10 +47,6 @@ protected:
 	// Called when this specific object needs to draw to the screen
 	virtual void OnDraw();
 
-	bool Impenetrable;
-
-	Circle hitbox;
-
 public:
 
 	//
@@ -53,6 +55,23 @@ public:
 
 	// Set default values for its data members
 	GameObject();
+
+	// Deletes references to parent
+	~GameObject();
+
+	// Tag Stuff
+
+	void AddTag(std::string tag);
+
+	void RemoveTag(std::string tag);
+
+	bool HasTag(std::string tag) const;
+
+	void RemoveParent();
+
+	bool CheckCollision(GameObject* other);
+
+	virtual void OnCollision(GameObject* other);
 
 	//
 	// GETTERS

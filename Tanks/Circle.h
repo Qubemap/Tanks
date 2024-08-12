@@ -5,7 +5,7 @@
 
 struct Circle {
 
-	Circle() {}
+	Circle() : center(), radius(0.0f) {}
 
 	Circle(const MathClasses::Vector2& p, float r) : center(p), radius(r) {}
 
@@ -55,6 +55,14 @@ struct Circle {
 		return toPoint.MagnitudeSqr() <= (radius * radius);
 	}
 
+	bool Overlaps(const Circle& other) const
+	{
+		MathClasses::Vector2 diff = center - other.center;
+
+		return diff.MagnitudeSqr() <= ((radius + other.radius) * (radius + other.radius));
+	}
+
+
 	MathClasses::Vector2 ClosestPoint(const MathClasses::Vector2& p) const
 	{
 		// Distance from center
@@ -70,6 +78,10 @@ struct Circle {
 
 	}
 
-	Circle operator =(const Circle)
+	Circle operator =(const Circle other)
+	{
+		this->center = other.center;
+		this->radius = other.radius;
+	}
 
 };
