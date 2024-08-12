@@ -5,7 +5,7 @@ void TankManager::OnUpdate(float deltaTime)
 
 	// SCALE
 
-	float MODIFIER = 1.1;
+	float MODIFIER = 1.1f;
 	MathClasses::Vector3 in(MODIFIER, MODIFIER, 1);
 
 	MODIFIER = 0.9f;
