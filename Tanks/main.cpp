@@ -32,8 +32,16 @@ int main(void)
 	SpriteObject TankTrap;
 	TankTrap.Sprite = &trapSprite;
 	TankTrap.SetParent(&Master);
-	TankTrap.SetLocalPosition(-400, 100);
+	TankTrap.SetLocalPosition(-300, 100);
+	TankTrap.Rotate(3.5f);
 	TankTrap.AddTag("ImmovableObject");
+
+	SpriteObject TankTrap2;
+	TankTrap2.Sprite = &trapSprite;
+	TankTrap2.SetParent(&Master);
+	TankTrap2.SetLocalPosition(200, -150);
+	TankTrap2.Rotate(1.2f);
+	TankTrap2.AddTag("ImmovableObject");
 
 	TankPlayer Player;
 	Player.Sprite = &tankSprite;
@@ -70,7 +78,13 @@ int main(void)
 
 		//ClearBackground(RAYWHITE);
 
-		//DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+		DrawText("[W] [S] - Forward/Backward", 20, 20, 15, LIGHTGRAY);
+		DrawText("[A] [D] - Rotation", 20, 40, 15, LIGHTGRAY);
+		DrawText("[Q] [E] - Turret Rotation", 20, 60, 15, LIGHTGRAY);
+		DrawText("[SPACE] - Shoot", 20, 80, 15, LIGHTGRAY);
+		DrawText("[SCROLL] - Global Scale", 20, 100, 15, LIGHTGRAY);
+		
+
 
 		EndDrawing();
 		//----------------------------------------------------------------------------------
